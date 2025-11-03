@@ -80,7 +80,7 @@ app.get("/cdstrProduto", (req, res) => {
 
         <div class="container">
             <h1 class="text-center border m-3 p-3 bg-light">Cadastro de Produtos</h1>
-            <form method="POST" action="/dncrProduto" class="row g-3 needs-validation m-3 p-3 bg-light" novalidate>
+            <form method="POST" action="/dcnrProduto" class="row g-3 needs-validation m-3 p-3 bg-light" novalidate>
                 <div class="col-md-4">
                     <label for="produto" class="form-label">Nome do produto</label>
                     <input type="text" class="form-control" id="produto" name="produto">
