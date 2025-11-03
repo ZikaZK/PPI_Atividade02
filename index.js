@@ -170,20 +170,21 @@ app.get("/chcrProduto", (req, res) => {
             </div>
         </div>
     </nav>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col">Produto</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Código</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Fornecedor</th>
-            </tr>
-        </thead>
-        <tbody>`
-        for(i = 0; i < listaProdutos.length; i++){
+    <div class="container">
+        <h1 class="text-center border m-3 p-3 bg-light">Lista de produtos</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Código</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Fornecedor</th>
+                </tr>
+            </thead>
+            <tbody>`
+        for(let i = 0; i < listaProdutos.length; i++){
             conteudo += `
                 <tr>
                     <td>${listaProdutos[i].produto}</td>
@@ -198,10 +199,11 @@ app.get("/chcrProduto", (req, res) => {
         conteudo += `
             </tbody>
             </table>
+            </div>
             </body>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
             </html>
         `;
-        
+
     res.send(conteudo);
 });
