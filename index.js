@@ -189,7 +189,7 @@ app.get("/chcrProduto", (req, res) => {
                 <tr>
                     <td>${listaProdutos[i].produto}</td>
                     <td>${listaProdutos[i].descricao}</td>
-                    <td>${(listaProdutos[i].preco).toFixed(2)}</td>
+                    <td>${listaProdutos[i].preco}</td>
                     <td>${listaProdutos[i].codigo}</td>
                     <td>${listaProdutos[i].categoria}</td>
                     <td>${listaProdutos[i].fornecedor}</td>
